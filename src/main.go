@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	tr := &Trace{"demo", log.New(os.Stderr, "AO2 SI - ", log.Ltime)}
+	tr := &Trace{"demo", log.New(os.Stderr, "Logging - ", log.Ltime)}
 
 	//Caba
 	mapcaba := map[string]int{
@@ -36,8 +36,8 @@ func main() {
 		"22": 2373,
 		"23": 799}
 
-	caba := Ciudad{"CABA", "0", mapcaba}
-	mostrar(caba, tr)
+	caba := City{"CABA", "0", mapcaba}
+	printCity(caba, tr)
 
 	//Córdoba
 	mapcba := map[string]int{
@@ -65,8 +65,8 @@ func main() {
 		"22": 2618,
 		"23": 1047}
 
-	cba := Ciudad{"Córdoba", "1", mapcba}
-	mostrar(cba, tr)
+	cba := City{"Córdoba", "1", mapcba}
+	printCity(cba, tr)
 
 	//Corrientes
 	mapcorr := map[string]int{
@@ -94,8 +94,8 @@ func main() {
 		"22": 3131,
 		"23": 1527}
 
-	corr := Ciudad{"Corrientes", "2", mapcorr}
-	mostrar(corr, tr)
+	corr := City{"Corrientes", "2", mapcorr}
+	printCity(corr, tr)
 
 	//Formosa
 	mapform := map[string]int{
@@ -123,8 +123,8 @@ func main() {
 		"22": 3284,
 		"23": 1681}
 
-	form := Ciudad{"Formosa", "3", mapform}
-	mostrar(form, tr)
+	form := City{"Formosa", "3", mapform}
+	printCity(form, tr)
 
 	//La Plata
 	maplp := map[string]int{
@@ -152,8 +152,8 @@ func main() {
 		"22": 2350,
 		"23": 789}
 
-	lp := Ciudad{"La Plata", "4", maplp}
-	mostrar(lp, tr)
+	lp := City{"La Plata", "4", maplp}
+	printCity(lp, tr)
 
 	//La Rioja
 	maplr := map[string]int{
@@ -181,8 +181,8 @@ func main() {
 		"22": 2821,
 		"23": 1311}
 
-	lr := Ciudad{"La Rioja", "5", maplr}
-	mostrar(lr, tr)
+	lr := City{"La Rioja", "5", maplr}
+	printCity(lr, tr)
 
 	//Mendoza
 	mapmend := map[string]int{
@@ -210,8 +210,8 @@ func main() {
 		"22": 2435,
 		"23": 1019}
 
-	mend := Ciudad{"Mendoza", "6", mapmend}
-	mostrar(mend, tr)
+	mend := City{"Mendoza", "6", mapmend}
+	printCity(mend, tr)
 
 	//Neuquén
 	mapneu := map[string]int{
@@ -239,8 +239,8 @@ func main() {
 		"22": 1762,
 		"23": 479}
 
-	neu := Ciudad{"Neuquén", "7", mapneu}
-	mostrar(neu, tr)
+	neu := City{"Neuquén", "7", mapneu}
+	printCity(neu, tr)
 
 	//Paraná
 	mappar := map[string]int{
@@ -268,8 +268,8 @@ func main() {
 		"22": 2635,
 		"23": 1030}
 
-	par := Ciudad{"Paraná", "8", mappar}
-	mostrar(par, tr)
+	par := City{"Paraná", "8", mappar}
+	printCity(par, tr)
 
 	//Posadas
 	mappos := map[string]int{
@@ -297,8 +297,8 @@ func main() {
 		"22": 3207,
 		"23": 1624}
 
-	pos := Ciudad{"Posadas", "9", mappos}
-	mostrar(pos, tr)
+	pos := City{"Posadas", "9", mappos}
+	printCity(pos, tr)
 
 	//Rawson
 	mapraw := map[string]int{
@@ -326,8 +326,8 @@ func main() {
 		"22": 1300,
 		"23": 327}
 
-	raw := Ciudad{"Rawson", "10", mapraw}
-	mostrar(raw, tr)
+	raw := City{"Rawson", "10", mapraw}
+	printCity(raw, tr)
 
 	//Resistencia
 	mapres := map[string]int{
@@ -355,8 +355,8 @@ func main() {
 		"22": 3130,
 		"23": 1526}
 
-	res := Ciudad{"Resistencia", "11", mapres}
-	mostrar(res, tr)
+	res := City{"Resistencia", "11", mapres}
+	printCity(res, tr)
 
 	//Rio Gallegos
 	maprg := map[string]int{
@@ -384,8 +384,8 @@ func main() {
 		"22": 359,
 		"23": 1294}
 
-	rg := Ciudad{"Rio Gallegos", "12", maprg}
-	mostrar(rg, tr)
+	rg := City{"Rio Gallegos", "12", maprg}
+	printCity(rg, tr)
 
 	//Catamarca
 	mapcata := map[string]int{
@@ -413,8 +413,8 @@ func main() {
 		"22": 2931,
 		"23": 1391}
 
-	cata := Ciudad{"Catamarca", "13", mapcata}
-	mostrar(cata, tr)
+	cata := City{"Catamarca", "13", mapcata}
+	printCity(cata, tr)
 
 	//Tucumán
 	maptuc := map[string]int{
@@ -442,8 +442,8 @@ func main() {
 		"22": 3116,
 		"23": 1562}
 
-	tuc := Ciudad{"Tucumán", "14", maptuc}
-	mostrar(tuc, tr)
+	tuc := City{"Tucumán", "14", maptuc}
+	printCity(tuc, tr)
 
 	//Jujuy
 	mapju := map[string]int{
@@ -471,8 +471,8 @@ func main() {
 		"22": 3408,
 		"23": 1855}
 
-	ju := Ciudad{"Jujuy", "15", mapju}
-	mostrar(ju, tr)
+	ju := City{"Jujuy", "15", mapju}
+	printCity(ju, tr)
 
 	//Salta
 	mapsal := map[string]int{
@@ -500,8 +500,8 @@ func main() {
 		"22": 3341,
 		"23": 1790}
 
-	sal := Ciudad{"Salta", "16", mapsal}
-	mostrar(sal, tr)
+	sal := City{"Salta", "16", mapsal}
+	printCity(sal, tr)
 
 	//San Juan
 	mapsj := map[string]int{
@@ -529,8 +529,8 @@ func main() {
 		"22": 2585,
 		"23": 1141}
 
-	sj := Ciudad{"San Juan", "17", mapsj}
-	mostrar(sj, tr)
+	sj := City{"San Juan", "17", mapsj}
+	printCity(sj, tr)
 
 	//San Luís
 	mapsl := map[string]int{
@@ -558,8 +558,8 @@ func main() {
 		"22": 2392,
 		"23": 882}
 
-	sl := Ciudad{"San Luís", "18", mapsl}
-	mostrar(sl, tr)
+	sl := City{"San Luís", "18", mapsl}
+	printCity(sl, tr)
 
 	//Santa Fe
 	mapsf := map[string]int{
@@ -587,8 +587,8 @@ func main() {
 		"22": 2641,
 		"23": 1035}
 
-	sf := Ciudad{"Santa Fe", "19", mapsf}
-	mostrar(sf, tr)
+	sf := City{"Santa Fe", "19", mapsf}
+	printCity(sf, tr)
 
 	//Santa Rosa
 	mapsr := map[string]int{
@@ -616,8 +616,8 @@ func main() {
 		"22": 2044,
 		"23": 477}
 
-	sr := Ciudad{"Santa Rosa", "20", mapsr}
-	mostrar(sr, tr)
+	sr := City{"Santa Rosa", "20", mapsr}
+	printCity(sr, tr)
 
 	//Santiago Del Estero
 	mapsdl := map[string]int{
@@ -645,8 +645,8 @@ func main() {
 		"22": 3016,
 		"23": 1446}
 
-	sdl := Ciudad{"Santiago Del Estero", "21", mapsdl}
-	mostrar(sdl, tr)
+	sdl := City{"Santiago Del Estero", "21", mapsdl}
+	printCity(sdl, tr)
 
 	//Ushuaia
 	mapus := map[string]int{
@@ -674,8 +674,8 @@ func main() {
 		"21": 3016,
 		"23": 1605}
 
-	us := Ciudad{"Ushuaia", "22", mapus}
-	mostrar(us, tr)
+	us := City{"Ushuaia", "22", mapus}
+	printCity(us, tr)
 
 	//Viedma
 	mapvie := map[string]int{
@@ -703,10 +703,10 @@ func main() {
 		"21": 1446,
 		"22": 1605}
 
-	vie := Ciudad{"Viedma", "23", mapvie}
-	mostrar(vie, tr)
+	vie := City{"Viedma", "23", mapvie}
+	printCity(vie, tr)
 
-	capitales := map[string]Ciudad{
+	capitals := map[string]City{
 		"0":  caba,
 		"1":  cba,
 		"2":  corr,
@@ -732,28 +732,31 @@ func main() {
 		"22": us,
 		"23": vie}
 
-	tr.Logger.Print("Seleccione una ciudad ingresando su identificador y presione enter")
+	tr.Logger.Print("Choose a city by id and press enter")
 	id := ""
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		id = scanner.Text()
-		/*Verifica que exista id en capitales*/
-		if _, ok := capitales[id]; ok {
+		/*Verifica que exista id en capitals*/
+		if _, ok := capitals[id]; ok {
 			break
 		}
 	}
-	ciudad := capitales[id]
+	City := capitals[id]
 
-	recorrido, distancia := obtenerRecorrido(id, capitales)
-	if recorrido != nil && distancia != "" {
-		tr.Logger.Print("**************************Ciudad de partida**************************")
-		mostrar(ciudad, tr)
-		tr.Logger.Print("******************************Recorrido******************************")
-		tr.Logger.Print(recorrido)
-		tr.Logger.Print("***************************Distancia total***************************")
-		tr.Logger.Print("[" + distancia + " KM]")
+	path, distance := calculatePathAndDistance(id, capitals)
+	if distance != nil && distance != "" {
+		tr.Logger.Print("**************************City de partida**************************")
+		printCity(City, tr)
+		tr.Logger.Print("******************************Path******************************")
+		tr.Logger.Print(path)
+		tr.Logger.Print("***************************Distance***************************")
+		tr.Logger.Print("[" + distance + " KM]")
 	} else {
-		tr.Logger.Print("ERROR: Algo salió mal :'(")
+		tr.Logger.Print("ERROR: Something happened :'(")
 	}
+}
 
+func printCity(c City, tr *Trace) {
+	tr.Logger.Print(c.IdCity + ") " + c.Name)
 }

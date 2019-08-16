@@ -4,9 +4,9 @@ import (
 	"log"
 )
 
-type Ciudad struct {
-	Nombre, IdCiudad string
-	Distancias       map[string]int
+type City struct {
+	Name, IdCity string
+	Distances map[string]int
 }
 
 type Trace struct {
