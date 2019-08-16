@@ -22,6 +22,7 @@ func calculatePathAndDistance(idCity string, capitals map[string]City) ([]string
 			distance := -1
 			capital := c
 			for k, v := range c.Distances {
+				/*Verify existence*/
 				if _, ok := capitals[k]; ok {
 					if distance < 0 || distance > v {
 						distance = v

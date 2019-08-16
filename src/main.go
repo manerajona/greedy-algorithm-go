@@ -17,7 +17,7 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		id = scanner.Text()
-		/*Verifica que exista id en capitals*/
+		/*Verify existence*/
 		if _, ok := capitals[id]; ok {
 			break
 		}
