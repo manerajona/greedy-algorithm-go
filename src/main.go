@@ -10,6 +10,39 @@ func main() {
 
 	tr := &Trace{"demo", log.New(os.Stderr, "Logging - ", log.Ltime)}
 
+	capitals := getCapitals(tr);
+
+	tr.Logger.Print("Choose a city by id and press enter")
+	id := ""
+	scanner := bufio.NewScanner(os.Stdin)
+	for scanner.Scan() {
+		id = scanner.Text()
+		/*Verifica que exista id en capitals*/
+		if _, ok := capitals[id]; ok {
+			break
+		}
+	}
+	City := capitals[id]
+
+	path, distance := calculatePathAndDistance(id, capitals)
+	if distance != "" {
+		tr.Logger.Print("************ City when you start ************")
+		tr.Logger.Print(" ID - CAPITAL ")
+		printCity(City, tr)
+		tr.Logger.Print("************ Path ***************************")
+		tr.Logger.Print(path)
+		tr.Logger.Print("************ Total **************************")
+		tr.Logger.Print("[" + distance + " KM]")
+	} else {
+		tr.Logger.Print("ERROR: Something happened :'(")
+	}
+}
+
+func printCity(c City, tr *Trace) {
+	tr.Logger.Print(c.IdCity + ") " + c.Name)
+}
+
+func getCapitals(tr *Trace) map[string]City {
 	//Caba
 	mapcaba := map[string]int{
 		"1":646,"2":792,"3":933,"4":53,"5":986,"6":985,"7":989,"8":375,"9":834,"10":1127,"11":794,"12":2082,"13":979,"14":1080,"15":1334,"16":1282,"17":1005,"18":749,"19":393,"20":579,"21":939,"22":2373,"23":799}
@@ -178,34 +211,6 @@ func main() {
 	vie := City{"Viedma", "23", mapvie}
 	printCity(vie, tr)
 
-	capitals := map[string]City{
-		"0":caba,"1":cba,"2":corr,"3":form,"4":lp,"5":lr,"6":mend,"7":neu,"8":par,"9":pos,"10":raw,"11":res,"12":rg,"13":cata,"14":tuc,"15":ju,"16":sal,"17":sj,"18":sl,"19":sf,"20":sr,"21":sdl,"22":us,"23":vie}
-
-	tr.Logger.Print("Choose a city by id and press enter")
-	id := ""
-	scanner := bufio.NewScanner(os.Stdin)
-	for scanner.Scan() {
-		id = scanner.Text()
-		/*Verifica que exista id en capitals*/
-		if _, ok := capitals[id]; ok {
-			break
-		}
-	}
-	City := capitals[id]
-
-	path, distance := calculatePathAndDistance(id, capitals)
-	if distance != nil && distance != "" {
-		tr.Logger.Print("************ City when you start ************")
-		printCity(City, tr)
-		tr.Logger.Print("************ Path ***************************")
-		tr.Logger.Print(path)
-		tr.Logger.Print("************ Distances **********************")
-		tr.Logger.Print("[" + distance + " KM]")
-	} else {
-		tr.Logger.Print("ERROR: Something happened :'(")
-	}
-}
-
-func printCity(c City, tr *Trace) {
-	tr.Logger.Print(c.IdCity + ") " + c.Name)
+	return (map[string]City{
+		"0":caba,"1":cba,"2":corr,"3":form,"4":lp,"5":lr,"6":mend,"7":neu,"8":par,"9":pos,"10":raw,"11":res,"12":rg,"13":cata,"14":tuc,"15":ju,"16":sal,"17":sj,"18":sl,"19":sf,"20":sr,"21":sdl,"22":us,"23":vie})
 }
