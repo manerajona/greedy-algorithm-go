@@ -12,7 +12,7 @@ func main() {
 
 	capitals := getCapitals(tr);
 
-	tr.Logger.Print("Choose a city by id and press enter")
+	tr.Logger.Print("Choose a city by Id and press enter ...")
 	id := ""
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
@@ -27,7 +27,6 @@ func main() {
 	path, distance := calculatePathAndDistance(id, capitals)
 	if distance != "" {
 		tr.Logger.Print("************ City when you start ************")
-		tr.Logger.Print(" ID - CAPITAL ")
 		printCity(City, tr)
 		tr.Logger.Print("************ Path ***************************")
 		tr.Logger.Print(path)
@@ -39,7 +38,7 @@ func main() {
 }
 
 func printCity(c City, tr *Trace) {
-	tr.Logger.Print(c.IdCity + ") " + c.Name)
+	tr.Logger.Print("Id: " + c.IdCity + ") " + c.Name)
 }
 
 func getCapitals(tr *Trace) map[string]City {
