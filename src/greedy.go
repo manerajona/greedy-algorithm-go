@@ -5,7 +5,7 @@ import (
 )
 
 /*  This Method implements a Greedy Algorithm in order to calculate
-		distances between capital cities of Argentina
+distances between capital cities of Argentina
 */
 func calculatePathAndDistance(idCity string, capitals map[string]City) ([]string, string) {
 

@@ -746,11 +746,11 @@ func main() {
 
 	path, distance := calculatePathAndDistance(id, capitals)
 	if distance != nil && distance != "" {
-		tr.Logger.Print("**************************City de partida**************************")
+		tr.Logger.Print("************ City when you start ************")
 		printCity(City, tr)
-		tr.Logger.Print("******************************Path******************************")
+		tr.Logger.Print("************ Path ***************************")
 		tr.Logger.Print(path)
-		tr.Logger.Print("***************************Distance***************************")
+		tr.Logger.Print("************ Distances **********************")
 		tr.Logger.Print("[" + distance + " KM]")
 	} else {
 		tr.Logger.Print("ERROR: Something happened :'(")
