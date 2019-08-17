@@ -1,6 +1,6 @@
 # greedy-algorithm-go
 
-### Objective
+### Goal
 
 To develop the algorithm to find the minimum distance route that can join all capitals of Argentina, using the following heuristics: "From each city go to the nearest city not visited".
 
