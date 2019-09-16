@@ -13,8 +13,8 @@ The algorithm has the following structure
 
 - Choose the city of departure.
 - The next city to visit is selected from a list.
-- Validate that the selected city is the one that is the least distance away and has not been visited, otherwise returns to step 2.
-- It is validated that there are cities to visit, in this case, step 2 and 3 is repeated; otherwise, the route is finished.
+- Validate if the selected city is the one that's the least distance away and hasn't been visited yet, otherwise returns to step 2.
+- Validate if there are cities to visit, in that case, step 2 and 3 is repeated; otherwise, the route is finished.
 
 ## Build & Run
 
