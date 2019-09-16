@@ -16,9 +16,6 @@ The algorithm has the following structure
 - Validate that the selected city is the one that is the least distance away and has not been visited, otherwise returns to step 2.
 - It is validated that there are cities to visit, in this case, step 2 and 3 is repeated; otherwise, the route is finished.
 
-![N|Solid](https://github.com/manerajona/greedy-algorithm-go/blob/master/greedy.gif)
-
-
 ## Build & Run
 
 For building:
