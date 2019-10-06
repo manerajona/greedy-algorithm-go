@@ -4,7 +4,7 @@ import (
 	"strconv"
 )
 
-/*  This Method implements a Greedy Algorithm in order to calculate
+/*  This Method implements a Non-Greedy Algorithm in order to calculate
 distances between capital cities of Argentina
 */
 func calculatePathAndDistance(idCity string, capitals map[string]City) ([]string, string) {
