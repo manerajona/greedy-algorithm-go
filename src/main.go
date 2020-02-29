@@ -23,12 +23,12 @@ func main() {
 		}
 		fmt.Println("Option incorrect, choose again please ...")
 	}
-	City := capitals[id]
-
+	startCity := capitals[id]
 	path, err := calculatePathAndDistance(id, capitals)
+
 	if err == nil {
 		fmt.Println("----- City when you start -----")
-		printCity(City)
+		printCity(startCity)
 		fmt.Println("------------ Path -------------")
 		printCities(path.Cities)
 		fmt.Println("------------ Total ------------")

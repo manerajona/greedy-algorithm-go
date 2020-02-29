@@ -9,9 +9,11 @@ distances between capital cities of Argentina
 */
 func calculatePathAndDistance(idCity string, capitals map[string]City) (Path, error) {
 
-	var path []City
-	var totalDistance int
-	var err error
+	var (
+		path          []City
+		totalDistance int
+		err           error
+	)
 
 	//Verify existence
 	if _, ok := capitals[idCity]; ok {
